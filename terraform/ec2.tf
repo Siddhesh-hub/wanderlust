@@ -116,7 +116,7 @@ resource "aws_instance" "wanderlust_master_instance" {
   vpc_security_group_ids = [aws_security_group.wanderlust_sg.id]
 
   root_block_device {
-    volume_size = 15
+    volume_size = 8
     volume_type = "gp3"
   }
 
@@ -131,7 +131,7 @@ resource "aws_instance" "wanderlust_slave_instance" {
   key_name               = aws_key_pair.wannderlust_key.key_name
   vpc_security_group_ids = [aws_security_group.wanderlust_sg.id]
   root_block_device {
-    volume_size = 15
+    volume_size = 8
     volume_type = "gp3"
   }
   tags = {
