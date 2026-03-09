@@ -111,7 +111,7 @@ resource "aws_key_pair" "wannderlust_key" {
 # Create master and slave EC2 instances
 resource "aws_instance" "wanderlust_master_instance" {
   ami                    = data.aws_ami.ubuntu.id
-  instance_type          = "t3.small"
+  instance_type          = "c7i-flex.large"
   key_name               = aws_key_pair.wannderlust_key.key_name
   vpc_security_group_ids = [aws_security_group.wanderlust_sg.id]
 
