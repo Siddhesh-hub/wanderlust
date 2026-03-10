@@ -30,7 +30,7 @@ module "eks" {
   eks_managed_node_groups = {
     wanderlust_node_group = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
-      ami_type       = "AL2023_x86_64_STANDARD"
+      ami_type = "AL2023_x86_64_STANDARD"
       # use Free Tier–eligible instance types; updated per user note
       instance_types = ["c7i-flex.large"]
 
@@ -38,7 +38,7 @@ module "eks" {
       max_size                              = 3
       desired_size                          = 2
       attach_cluster_primary_security_group = true
-      capacity_type                         = "ON_DEMAND"  # spot also allowed if diversified
+      capacity_type                         = "ON_DEMAND" # spot also allowed if diversified
     }
   }
 

@@ -132,7 +132,7 @@ resource "aws_instance" "wanderlust_slave_instance" {
   instance_type          = "t3.small"
   key_name               = aws_key_pair.wannderlust_key.key_name
   vpc_security_group_ids = [aws_security_group.wanderlust_sg.id]
-  
+
   iam_instance_profile = aws_iam_instance_profile.eks_instance_profile.name
 
   root_block_device {
